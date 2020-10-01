@@ -12,12 +12,10 @@ import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-const promise = loadStripe(
-  "pk_test_51HRkX7B0K2yYMIw3tKfTwQDeoYt6xLXmkpn7HzI07x7twqHB5z4Mgbc0Jvj59ZTLLsWYX6VsB72HIObpK6PjDswl00HKtphFeg"
-);
+const promise = loadStripe("#");
 
 function App() {
-  const [{ }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     // will only run once when the app component loads. It's like an if statement in React. The end brackets represent a conditional. If they are empty, it only runs once!
